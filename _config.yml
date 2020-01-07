@@ -1,12 +1,13 @@
 # Site settings
-title:
-email:
-description: > # this means to ignore newlines until "baseurl:"
+title: sysb
+email: hello@sysb.ai
+# description: > # this means to ignore newlines until "baseurl:"
+description: "Access your localhost"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "https://www.sysb.ai" # the base hostname & protocol for your site
 
-twitter_username:
-github_username:
+twitter_username: systembee
+github_username: systembee
 
 # Build settings
 markdown: kramdown
