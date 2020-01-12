@@ -78,7 +78,7 @@ aside {
         color: $theme-primary;
         @include sans-serif-font;
         font-weight: 900;
-        text-transform: lowercase;
+        text-transform: none;
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
