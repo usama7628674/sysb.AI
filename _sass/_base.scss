@@ -77,7 +77,8 @@ aside {
     .navbar-header .navbar-brand {
         color: $theme-primary;
         @include sans-serif-font;
-        font-weight: 900;
+        // font-weight: 900;
+        font-size: xx-large;
         text-transform: none;
         &:hover,
         &:focus {
