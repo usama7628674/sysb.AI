@@ -176,9 +176,10 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(white, .7);
                 font-size: 16px;
                 margin-bottom: 50px;
+                font-weight: inherit;
+                color: white;
             }
         }
     }
