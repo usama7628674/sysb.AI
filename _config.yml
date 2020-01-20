@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.sysb.ai" # the base hostname & protocol for your site
 
 twitter_username: sysb.ai
-github_username: sysb.ai
+github_username: systembee
 
 # Build settings
 markdown: kramdown
