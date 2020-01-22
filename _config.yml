@@ -6,8 +6,8 @@ description: "Access your localhost"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.sysb.ai" # the base hostname & protocol for your site
 
-twitter_username: sysb.ai
-github_username: systembee/sysb.AI
+twitter_username: sysb_ai
+github_username: sysb_ai
 
 # Build settings
 markdown: kramdown
