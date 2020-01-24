@@ -12,5 +12,5 @@ github_username: sysb-ai
 # Build settings
 markdown: kramdown
 
-plugins:
+gems:
   - jekyll-seo-tag
