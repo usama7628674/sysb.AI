@@ -31,3 +31,6 @@ It is quite possible that you may want to expose some other TCP based applicatio
 1. Does it support HTTP2 protocol?
 1. Does it support TCP port forwarding?
 1. Why I am not able to access old URL given by sysb.AI
+1. What kind of environment variables are supported?
+    1. SYSB_HOST
+    1. SYSB_SUBDOMAIN
