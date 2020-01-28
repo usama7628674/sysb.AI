@@ -1,7 +1,5 @@
-# Welcome
+# sysb.AI | Access your localhost
 Front page of [https://www.sysb.ai](https://www.sysb.ai)
-
-## Access your localhost
 
 ## How to access my local web application over internet?
 
@@ -22,6 +20,12 @@ If you have a web application running perfectly in your laptop and now you have 
      
 1. Above command will give you a dynamic HTTP and HTTPS which you can use to access your local web application over internet
 
+## How to add `Host: ` header?
+
+It is possible that while using the sysb.AI platform you can customize on which host header should come to your localhost web application. You only need to do the followings
+1. `export SYSB_HOST_HEADER="my_cool_web_app.com`
+1. `ssh -R 0:localhost:8080 demo@sysb.ai`
+
 ## How to access my TCP application over internet?
 
 It is quite possible that you may want to expose some other TCP based application over internet and you just need an endpoint which is accessible publicly. Like you probably just want to have your IoT device like Raspberry PI sshable. It is absolutely simple to do that. All you need to do the following
@@ -31,7 +35,6 @@ It is quite possible that you may want to expose some other TCP based applicatio
     1. `ssh -R 0:localhost:22 demo@sysb.ai`
 1. Above command will give a dynamic URL which can be accessed publicly to ssh your Raspberry PI. Please keep special attention to dynamic port number. You need both public FQDN and port number to access your TCP application like following
     1. After running the above command you may get one of the TCP port forwarding request like `tcp://sysb.ai:28559` and now you can access it as `ssh sysb.ai -p 28559`
-
 
 ## Here is the list of frequently asked questions
 
