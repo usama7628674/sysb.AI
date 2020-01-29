@@ -52,9 +52,13 @@ Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so mo
 ## Here is the list of frequently asked questions
 
 1. How can we report the issue or request for your feature
+You can raise a github issue at https://github.com/systembee/sysb.AI/issues to report a issue or request for a feature
 1. How can I get static subdomain of sysb.ai?
+This feature is in development and yet to be released
 1. Why I am not able to access old URL given by sysb.AI
+All the subdomain provided while tunneling is ephermeral which is active till your particular tunneling is active
 1. What kind of environment variables are supported?
+Currenly below two environemtn variable is supported though this feature is in development
     1. SYSB_HOST_HEADER
     1. SYSB_SUBDOMAIN
 1. How do we proniciate sysb.ai?
