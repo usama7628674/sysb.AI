@@ -25,6 +25,7 @@ If you have a web application running perfectly in your laptop and now you have 
 It is possible that while using the sysb.AI platform you can customize on which host header should come to your localhost web application. You only need to do the followings
 1. `export SYSB_HOST_HEADER="my_cool_web_app.com`
 1. `ssh -R 0:localhost:8080 demo@sysb.ai`
+*This feature is currently in development*
 
 ## How to access my TCP application over internet?
 
@@ -36,14 +37,22 @@ It is quite possible that you may want to expose some other TCP based applicatio
 1. Above command will give a dynamic URL which can be accessed publicly to ssh your Raspberry PI. Please keep special attention to dynamic port number. You need both public FQDN and port number to access your TCP application like following
     1. After running the above command you may get one of the TCP port forwarding request like `tcp://sysb.ai:28559` and now you can access it as `ssh sysb.ai -p 28559`
 
+## Does it support HTTP2 or HTTPS protocol?
+
+Yes, by default it support secure HTTP and next gen HTTP2 protocol.
+
+## What is tunneling by the way?
+
+In simple term a connection with a connection or a private connection in the public internet.
+
+## SSH Tips and Tricks
+
+Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so most of the options of the `ssh` like compression and background processing is supported.
+
 ## Here is the list of frequently asked questions
 
 1. How can we report the issue or request for your feature
-1. How can I provide customized `Host:` header while doing port forwarding
 1. How can I get static subdomain of sysb.ai?
-1. Does it support Secure HTTP ( HTTPS ) protocol?
-1. Does it support HTTP2 protocol?
-1. Does it support TCP port forwarding?
 1. Why I am not able to access old URL given by sysb.AI
 1. What kind of environment variables are supported?
     1. SYSB_HOST_HEADER
