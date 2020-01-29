@@ -25,6 +25,10 @@ If you have a web application running perfectly in your laptop and now you have 
 It is possible that while using the sysb.AI platform you can customize on which host header should come to your localhost web application. You only need to do the followings
 1. `export SYSB_HOST_HEADER=my_cool_web_app.com`
 1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai`
+Or we can do using `~/.ssh/config` file
+`Host sysb.ai
+  SetEnv SYSB_HOST_HEADER=my_cool_web_app
+  SendEnv SYSB_HOST_HEADER`
 
 ## How to access my TCP application over internet?
 
