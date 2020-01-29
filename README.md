@@ -63,3 +63,5 @@ Currenly below two environemtn variable is supported though this feature is in d
     1. SYSB_SUBDOMAIN
 1. How do we proniciate sysb.ai?
     1. it is 'sisbi dot ai'
+1. Does it support windows
+    1. Yes, you can use `putty` like ssh client which has option to do remote port forwarding
