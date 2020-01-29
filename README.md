@@ -24,8 +24,7 @@ If you have a web application running perfectly in your laptop and now you have 
 
 It is possible that while using the sysb.AI platform you can customize on which host header should come to your localhost web application. You only need to do the followings
 1. `export SYSB_HOST_HEADER="my_cool_web_app.com`
-1. `ssh -R 0:localhost:8080 demo@sysb.ai`
-*This feature is currently in development*
+1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai `
 
 ## How to access my TCP application over internet?
 
@@ -64,7 +63,8 @@ Currenly below two environemtn variable is supported though this feature is in d
 We can use this feature like below:
     1. `export SYSB_HOST_HEADER=demo.sysb.ai`
     1. `export SYSB_SUBDOMAIN=demo.sysb.ai`
-    1. `ssh -o SendEnv=SYSB_HOST_HEADER -o SendEnv=SYSB_SUBDOMAIN -R 0:127.0.0.1:8080 demo@sysb.ai `
+        1. `SYSB_SUBDOMAIN` is in development
+    1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai `
 1. How do we proniciate sysb.ai?
     1. it is 'sisbi dot ai'
 1. Does it support windows
