@@ -61,6 +61,9 @@ All the subdomain provided while tunneling is ephermeral which is active till yo
 Currenly below two environemtn variable is supported though this feature is in development
     1. SYSB_HOST_HEADER
     1. SYSB_SUBDOMAIN
+We can use this feature like below:
+    1. `export SYSB_HOST_HEADER=demo.sysb.ai SYSB_SUBDOMAIN=demo.sysb.ai` 
+    1. `ssh -o SendEnv=SYSB_HOST_HEADER,SYSB_SUBDOMAIN -R 0:127.0.0.1:8080 demo@sysb.ai`
 1. How do we proniciate sysb.ai?
     1. it is 'sisbi dot ai'
 1. Does it support windows
