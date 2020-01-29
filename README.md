@@ -1,4 +1,4 @@
-# sysb.AI | Access your localhost
+# sysb.AI | access your localhost
 Front page of [https://www.sysb.ai](https://www.sysb.ai)
 
 ## How to access my local web application over internet?
@@ -20,7 +20,7 @@ If you have a web application running perfectly in your laptop and now you have 
      
 1. Above command will give you a dynamic HTTP and HTTPS which you can use to access your local web application over internet
 
-## How to add `Host: ` header?
+## How to add `Host:`  header?
 
 It is possible that while using the sysb.AI platform you can customize on which host header should come to your localhost web application. You only need to do the followings
 1. `export SYSB_HOST_HEADER="my_cool_web_app.com`
