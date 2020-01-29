@@ -65,7 +65,7 @@ We can use this feature like below:
     1. `export SYSB_SUBDOMAIN=demo.sysb.ai`
         1. `SYSB_SUBDOMAIN` is in development
     1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai `
-1. How do we proniciate sysb.ai?
-    1. it is 'sisbi dot ai'
 1. Does it support windows
     1. Yes, you can use `putty` like ssh client which has option to do remote port forwarding
+1. How do we proniciate sysb.ai?
+    1. it is 'sisbi dot ai'
