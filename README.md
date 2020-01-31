@@ -63,7 +63,7 @@ Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so mo
 1. How can we report the issue or request for your feature
 You can raise a github issue at https://github.com/systembee/sysb.AI/issues to report a issue or request for a feature.
 1. Is there a mailing list which we can join to discuss new feature and enhancement?
-Yes, you can join our [Google group](https://groups.google.com/forum/#!forum/sysb_ai) mailing list to discuss new feature and enhancement
+Yes you can join our [Google group](https://groups.google.com/forum/#!forum/sysb_ai) mailing list to discuss new feature and enhancement
 1. How can I get static subdomain of sysb.ai?
 This feature is in development and yet to be released
 1. Why I am not able to access old URL given by sysb.AI
