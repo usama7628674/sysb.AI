@@ -31,7 +31,10 @@ Or we can do using `~/.ssh/config` file
 Host sysb.ai
   SetEnv SYSB_HOST_HEADER=my_cool_web_app
   SendEnv SYSB_HOST_HEADER
+  ServerAliveInterval 300
+  ServerAliveCountMax 3
   ```
+Here we also recommened to put the directives like `ServerAliveInterval` and `ServerAliveCountMax` which will protect the idle session from getting disconnected
 
 ## How to access my TCP application over internet?
 
