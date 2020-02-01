@@ -46,6 +46,10 @@ It is quite possible that you may want to expose some other TCP based applicatio
 1. Above command will give a dynamic URL which can be accessed publicly to ssh your Raspberry PI. Please keep special attention to dynamic port number. You need both public FQDN and port number to access your TCP application like following
     1. After running the above command you may get one of the TCP port forwarding request like `tcp://sysb.ai:28559` and now you can access it as `ssh sysb.ai -p 28559`
 
+## How to stop the port forwarding
+
+If you are using terminal then `ctrl+c` is your friend to stop the port forwarding
+
 ## Does it support HTTP2 or HTTPS protocol?
 
 Yes, by default it support secure HTTP and next gen HTTP2 protocol.
