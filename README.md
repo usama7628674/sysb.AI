@@ -72,6 +72,10 @@ Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so mo
     1. This feature is in development and yet to be released
 1. Why I am not able to access old URL given by sysb.AI
     1. All the subdomain provided while tunneling is ephermeral which is active till your particular tunneling is active
+1. My internet is damn slow and I am getting frequent disconnection
+    1. We advice you to use `-C` in your ssh client flags as it will compress the data being used in the connection. Though, it will only slow down things on fast networks. So I advice to use only when network is damn slow. Syntax is as follows:
+        1. `ssh -CR 0:127.0.0.1:8080 demo@sysb.ai`
+        1. Keep notice on `-C` flag
 1. What kind of environment variables are supported?
 Currenly below two environemtn variable is supported though this feature is in development
     1. SYSB_HOST_HEADER
