@@ -66,7 +66,7 @@ Yes, by default it support secure HTTP and next gen HTTP2 protocol.
     1. e.g. `ssh -G -R 0:localhost:8118 demo@sysb.ai`
 1. Get remote ssh server's all hostkey
     1. for example:
-    ```
+```
 $ssh-keyscan sysb.ai
 # sysb.ai:22 SSH-2.0-OpenSSH_7.8 sysb-2020
 sysb.ai ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAvJFEhuxfFRxfFoB2CFbEQCBmil7MCZhrAouZfoC9d7
