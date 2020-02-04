@@ -13,9 +13,7 @@ github_username: sysb-ai
 markdown: kramdown
 
 
-#################################
-## Testing here:
-
+#### Testing here ####
 defaults:
   - scope:
       path: '_posts'
