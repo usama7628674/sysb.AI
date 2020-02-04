@@ -65,7 +65,7 @@ Yes, by default it support secure HTTP and next gen HTTP2 protocol.
     1. Use the `-G` option to ssh. It tells ssh to parse all the configurations for the target host, print out the configuration it is going to use, and immediately exit without connecting.
     1. e.g. `ssh -G -R 0:localhost:8118 demo@sysb.ai`
 1. Get remote ssh server's all hostkey
-    1. 
+    1. for example:
     ```
 $ssh-keyscan sysb.ai
 # sysb.ai:22 SSH-2.0-OpenSSH_7.8 sysb-2020
