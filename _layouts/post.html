@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+  {% include analytics.html %}
+  {% include nav.html %}
+
+
+<div class="wrapper">
+  <div class="row">
+    <div class="column column--center medium-10 large-10">
+      <article class="post {% unless page.image %} post--no-image {% endunless %}" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="text-center post__header">
+          <h2 class="post__title" itemprop="name headline">{{ page.title }}</h2>
+          <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+        </header>
+        <div class="post-content text-justify" itemprop="articleBody">
+          {{ content }}
+        </div>
+
+
+        <hr>
+
+      </article>
+    </div>
+
+  </div> <!-- row-->
+</div> <!-- wrapper -->
+
+</body>
+</html>
+

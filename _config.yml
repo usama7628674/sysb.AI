@@ -11,3 +11,33 @@ github_username: sysb-ai
 
 # Build settings
 markdown: kramdown
+
+
+#################################
+## Testing here:
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: '_posts'
+    values:
+      permalink: /blog/:categories/:title:output_ext
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+include:
+  - _pages
+
+permalink: pretty
+paginate:  12
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll/tagging
+  - jekyll-redirect-from
+  - jekyll-sitemap
