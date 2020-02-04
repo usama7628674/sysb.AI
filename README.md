@@ -61,6 +61,8 @@ It is quite possible that you may want to expose some other TCP based applicatio
 Yes, by default it support secure HTTP and next gen HTTP2 protocol.
 
 ## SSH Tips and Tricks
+1. We can also define ssh port number before `@` like below
+    1. like this `ssh -R 0:localhost:8080 demo:22@sysb.ai`
 1. Evaluating your SSH configuration
     1. Use the `-G` option to ssh. It tells ssh to parse all the configurations for the target host, print out the configuration it is going to use, and immediately exit without connecting.
     1. e.g. `ssh -G -R 0:localhost:8118 demo@sysb.ai`
