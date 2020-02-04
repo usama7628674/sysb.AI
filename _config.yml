@@ -15,12 +15,8 @@ markdown: kramdown
 
 #################################
 ## Testing here:
-include:
-  - _pages
 defaults:
   - scope:
       path: '_posts'
     values:
       permalink: /blog/:categories/:title:output_ext
-plugins:
-  - jekyll-sitemap
