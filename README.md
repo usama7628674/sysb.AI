@@ -21,13 +21,14 @@ If you have a web application running perfectly in your laptop and now you have 
 1. Above command will give you a dynamic HTTP and HTTPS which you can use to access your local web application over internet
 
 ## How can I get static subdomain of sysb.ai?
-    1. You can use below config in your `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
+
+You can use below config in your `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```bash
 Host sysb.ai
     SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
 ```
 also you can use command line flags to get it done, like below
-
+`ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai`
 
 ## How to add `Host:`  header?
 
