@@ -12,7 +12,6 @@ github_username: sysb-ai
 # Build settings
 markdown: kramdown
 
-
 #### Testing here ####
 defaults:
   - scope:
