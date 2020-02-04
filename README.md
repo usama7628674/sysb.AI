@@ -56,10 +56,6 @@ It is quite possible that you may want to expose some other TCP based applicatio
 1. Above command will give a dynamic URL which can be accessed publicly to ssh your Raspberry PI. Please keep special attention to dynamic port number. You need both public FQDN and port number to access your TCP application like following
     1. After running the above command you may get one of the TCP port forwarding request like `tcp://sysb.ai:28559` and now you can access it as `ssh sysb.ai -p 28559`
 
-## How to stop the port forwarding
-
-If you are using terminal then `ctrl+c` is your friend to stop the port forwarding
-
 ## Does it support HTTP2 or HTTPS protocol?
 
 Yes, by default it support secure HTTP and next gen HTTP2 protocol.
@@ -67,10 +63,6 @@ Yes, by default it support secure HTTP and next gen HTTP2 protocol.
 ## What is tunneling by the way?
 
 In simple term a connection with a connection or a private connection in the public internet.
-
-## SSH Tips and Tricks
-
-Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so most of the options of the `ssh` like compression and background processing is supported.
 
 ## Here is the list of frequently asked questions
 
@@ -80,6 +72,8 @@ Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so mo
     1. Yes you can join our [Google group](https://groups.google.com/forum/#!forum/sysb_ai) mailing list to discuss new feature and enhancement
 1. Why I am not able to access old URL given by sysb.AI
     1. All the subdomain provided while tunneling is ephermeral which is active till your particular tunneling is active
+1. How to stop the port forwarding
+    1. If you are using terminal then `ctrl+c` is your friend to stop the port forwarding
 1. My internet is damn slow and I am getting frequent disconnection
     1. We advice you to use `-C` in your ssh client flags as it will compress the data being used in the connection. Though, it will only slow down things on fast networks. So I advice to use only when network is damn slow. Syntax is as follows:
         1. `ssh -CR 0:127.0.0.1:8080 demo@sysb.ai`
