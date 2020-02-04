@@ -62,7 +62,7 @@ Yes, by default it support secure HTTP and next gen HTTP2 protocol.
 
 ## SSH Tips and Tricks
 1. Evaluating your SSH configuration
-    1. Use the `-G` option to ssh. It tells ssh to parse all the configurations for the target host, print out the configuration it is going to use, and immediatly exit without connecting.
+    1. Use the `-G` option to ssh. It tells ssh to parse all the configurations for the target host, print out the configuration it is going to use, and immediately exit without connecting.
     1. e.g. `ssh -G -R 0:localhost:8118 demo@sysb.ai`
 1. How find which alog and encryption method is supported by remote SSH server
     1. We can use `nmap --script ssh2-enum-algos -Pn -p 22 sysb.ai` command, which gives output as below:
