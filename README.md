@@ -64,8 +64,10 @@ Yes, by default it support secure HTTP and next gen HTTP2 protocol.
 1. Evaluating your SSH configuration
     1. Use the `-G` option to ssh. It tells ssh to parse all the configurations for the target host, print out the configuration it is going to use, and immediately exit without connecting.
     1. e.g. `ssh -G -R 0:localhost:8118 demo@sysb.ai`
+
 1. There is a `ssh` prmompt
     1. When logged in as SSH connection then just press `~` then `C` and we will get `ssh>` prompt
+    1. `~?` displays a list of all available escape characters
     1. Also we can use `help` to check for the options
 ```
 ssh> help
