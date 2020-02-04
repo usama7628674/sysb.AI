@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Tips and Tricks for using cURL
-excerpt: Tips and Tricks for using cURL - SystemBee Inc
-author: balbir
-tags: [command, os]
 categories: Command
-image: '/images/posts/wire.jpeg'
 ---
 
 Few tips and tricks of using cURL
