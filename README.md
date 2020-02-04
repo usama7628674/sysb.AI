@@ -69,9 +69,10 @@ Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so mo
     1. Yes you can join our [Google group](https://groups.google.com/forum/#!forum/sysb_ai) mailing list to discuss new feature and enhancement
 1. How can I get static subdomain of sysb.ai?
     1. This feature is in development and yet to be released officially though you can still use this feature and let us know what you think. You can use below config in your `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
-    1. ```Host sysb.ai
-  SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
-  ```
+```bash
+Host sysb.ai
+    SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
+```
 1. Why I am not able to access old URL given by sysb.AI
     1. All the subdomain provided while tunneling is ephermeral which is active till your particular tunneling is active
 1. My internet is damn slow and I am getting frequent disconnection
