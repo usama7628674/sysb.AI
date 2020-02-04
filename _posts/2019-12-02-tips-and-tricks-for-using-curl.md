@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Tips and Tricks for using cURL
-categories: command
 ---
 
 Few tips and tricks of using cURL
