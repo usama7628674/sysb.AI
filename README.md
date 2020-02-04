@@ -20,16 +20,24 @@ If you have a web application running perfectly in your laptop and now you have 
      
 1. Above command will give you a dynamic HTTP and HTTPS which you can use to access your local web application over internet
 
+## How can I get static subdomain of sysb.ai?
+    1. You can use below config in your `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
+```bash
+Host sysb.ai
+    SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
+```
+also you can use command line flags to get it done, like below
+
+
 ## How to add `Host:`  header?
 
 It is possible that while using the sysb.AI platform you can customize on which host header should come to your localhost web application. You only need to do the followings
-1. `export SYSB_HOST_HEADER=my_cool_web_app.com`
-1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai`
+1.`ssh -o 'SetEnv SYSB_HOST_HEADER=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai` 
 Or we can do using `~/.ssh/config` file
 
 ```
 Host sysb.ai
-  SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
+  SetEnv SYSB_HOST_HEADER=my_cool_web_app.com
   ServerAliveInterval 300
   ServerAliveCountMax 3
   ```
@@ -67,12 +75,6 @@ Since we can use native SSH clients preinstalled in Linux, Unix and Mac OS so mo
     1. You can raise a github issue at https://github.com/systembee/sysb.AI/issues to report a issue or request for a feature.
 1. I am wondering if there a mailing list which we can join to discuss new features and enhancement?
     1. Yes you can join our [Google group](https://groups.google.com/forum/#!forum/sysb_ai) mailing list to discuss new feature and enhancement
-1. How can I get static subdomain of sysb.ai?
-    1. This feature is in development and yet to be released officially though you can still use this feature and let us know what you think. You can use below config in your `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
-```bash
-Host sysb.ai
-    SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
-```
 1. Why I am not able to access old URL given by sysb.AI
     1. All the subdomain provided while tunneling is ephermeral which is active till your particular tunneling is active
 1. My internet is damn slow and I am getting frequent disconnection
