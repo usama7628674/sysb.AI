@@ -28,7 +28,7 @@ Host sysb.ai
     SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
 ```
 also you can use command line flags to get it done, like below
-`ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai`
+```ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai```
 
 ## How to add `Host:`  header?
 
