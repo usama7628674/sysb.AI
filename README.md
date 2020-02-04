@@ -60,9 +60,10 @@ It is quite possible that you may want to expose some other TCP based applicatio
 
 Yes, by default it support secure HTTP and next gen HTTP2 protocol.
 
-## What is tunneling by the way?
-
-In simple term a connection with a connection or a private connection in the public internet.
+## SSH Tips and Tricks
+1. Evaluating your SSH configuration
+    1. Use the `-G` option to ssh. It tells ssh to parse all the configurations for the target host, print out the configuration it is going to use, and immediatly exit without connecting.
+    1. e.g. `ssh -G -R 0:localhost:8118 demo@sysb.ai`
 
 ## Here is the list of frequently asked questions
 
