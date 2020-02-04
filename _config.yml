@@ -19,4 +19,4 @@ defaults:
   - scope:
       path: '_posts'
     values:
-      permalink: /blog/:categories/:title:output_ext
+      permalink: /blog/:title:output_ext
