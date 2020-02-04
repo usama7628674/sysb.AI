@@ -15,8 +15,10 @@ markdown: kramdown
 
 #################################
 ## Testing here:
+
 defaults:
   - scope:
       path: '_posts'
     values:
-      permalink: /blog/:title:output_ext
+      permalink: /blog/:categories:/:title:output_ext
+      
