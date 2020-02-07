@@ -25,11 +25,18 @@ If you have a web application running perfectly in your laptop and now you have 
 You can use below config in your `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```bash
 Host sysb.ai
-    SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my-header
+    SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=localhost
 ```
 also you can use command line flags to get it done, like below
 ```
 ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai
+```
+
+Some ssh client do not support `SetEnv` variable in that case we can use SendEnv
+
+```
+export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=localhost
+ssh -o SendEnv=SYSB_SUBDOMAIN -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
 
 ## How to add `Host:`  header?
