@@ -32,7 +32,7 @@ also you can use command line flags to get it done, like below
 ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai
 ```
 
-Some ssh client do not support `SetEnv` variable in that case we can use SendEnv
+Some ssh client do not support `SetEnv` directive in that case we can use `SendEnv` directive
 
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=localhost
