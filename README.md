@@ -48,16 +48,25 @@ Host sysb.ai
 ```
 Alternatively, if we prefer ssh's command line flag then we can also do it as below:
 ```
-ssh -o SendEnv=SYSB_SUBDOMAIN -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
+ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
 
 ## How to add `Host:`  header?
 
-It is possible that while using the sysb.AI platform you can customize on which `Host: ` header should come to your localhost web application. You only need to execute `ssh -o 'SetEnv SYSB_HOST_HEADER=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai`. Alternatively, we can do using `~/.ssh/config` file
+It is possible that while using the sysb.AI platform you can customize on which `Host: ` header should come to your localhost web application. You only need to execute `ssh -o 'SetEnv SYSB_SUBDOMAIN=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai`. Alternatively, we can do using `~/.ssh/config` file
 ```
 Host sysb.ai
   SetEnv SYSB_HOST_HEADER=my_cool_web_app.com
 ```
+and then run `ssh -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host: ` header
+
+Now if your ssh client does not support `SetEnv` directive then we can use `SendEnv` directive. It is like first we set a environment variable then send it across using `SendEnv` directive. Here is the steps on how to get it done
+1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
+1. Then run `ssh -o SendEnv=SYSB_HOST_HEADER  -R 0:localhost:8080 demo@sysb.ai` to get the custom subdomain and custom `Host: ` header
+
+## How to request for custom subdomain and `Host: ` header
+1. `export SYSB_HOST_HEADER=my_cool_web_app.com`
+1. `ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai`
 
 ## How to access my TCP application over internet?
 
