@@ -3,7 +3,7 @@ layout: post
 title: SSH Tips and Tricks
 ---
 <!-- URLS: https://www.sysb.ai/blog/ssh-tips-and-tricks.html -->
-### SSH Tips and Tricks
+SSH Tips and Tricks
 1. We can also define ssh port number before `@` like below
     1. like this `ssh -R 0:localhost:8080 demo:22@sysb.ai`
 1. Evaluating your SSH configuration
