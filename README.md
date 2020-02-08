@@ -22,22 +22,22 @@ If you have a web application running perfectly in your laptop and now you have 
 
 ## How can I get static subdomain of sysb.ai?
 
-We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
+- We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```
 Host sysb.ai
     SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=localhost
 ```
 
-Then all we need to do the following:
+Then all we need to do is to run the following:
 ```
 ssh -R 0:127.0.0.1:8080 demo@sysb.ai 
 ```
-and it will give us static requested subdomain `https://my-awesome-subdomain.us.sysb.ai`. Also we can use command line flags of ssh to get it done, like below
+and it will give us requested static subdomain `https://my-awesome-subdomain.us.sysb.ai`. Alternatively, we can use command line flags of ssh to get it done, like below
 ```
 ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai
 ```
 
-_I were informed that some ssh client do not support `SetEnv` directive so in that case we can use `SendEnv` directive to achieve the same_
+- I were informed that some ssh client do not support `SetEnv` directive so in that case we can use `SendEnv` directive to achieve the same
 
 Before we attemtpt to send these environemnt variable we need to set it. And we can export the environment variable like below:
 ```
