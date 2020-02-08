@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tips and Tricks for using cURL
+title: SSH Tips and Tricks
 ---
 
 This is content
