@@ -98,7 +98,7 @@ sysb.ai ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9c7WjXUSsYS3ZvjoLy0RSTLTeq8zt7NOe
 # sysb.ai:22 SSH-2.0-OpenSSH_7.8 sysb-2020
 sysb.ai ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGictWp/32RZ2qsaBP2uc6xym0sH/73/ZedmjAvkiHslYllFIO8S9NCkuOYyOTDht9Zai4ZX3N6tOGi3AkC4Bk8=
 ```
-1. How find which alog and encryption method is supported by remote SSH server
+1. How to find which alog and encryption method is supported by remote SSH server
     1. We can use `nmap --script ssh2-enum-algos -Pn -p 22 sysb.ai` command, which gives output as below:
 ```
 $nmap --script ssh2-enum-algos -Pn -p 22 sysb.ai
