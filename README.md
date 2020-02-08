@@ -53,17 +53,11 @@ ssh -o SendEnv=SYSB_SUBDOMAIN -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 de
 
 ## How to add `Host:`  header?
 
-It is possible that while using the sysb.AI platform you can customize on which host header should come to your localhost web application. You only need to do the followings
-1.`ssh -o 'SetEnv SYSB_HOST_HEADER=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai` 
-Or we can do using `~/.ssh/config` file
-
+It is possible that while using the sysb.AI platform you can customize on which `Host: ` header should come to your localhost web application. You only need to execute `ssh -o 'SetEnv SYSB_HOST_HEADER=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai`. Alternatively, we can do using `~/.ssh/config` file
 ```
 Host sysb.ai
   SetEnv SYSB_HOST_HEADER=my_cool_web_app.com
-  ServerAliveInterval 300
-  ServerAliveCountMax 3
-  ```
-Here we also recommened to put the directives like `ServerAliveInterval` and `ServerAliveCountMax` which will protect the idle session from getting disconnected
+```
 
 ## How to access my TCP application over internet?
 
@@ -193,5 +187,7 @@ We can use this feature like below:
     1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai `
 1. Does it support windows
     1. Yes, you can use `putty` like ssh client which has option to do remote port forwarding
+1. How to avoid frequent disconnect due to idle timeout
+    1. We recommened to put the directives like `ServerAliveInterval` and `ServerAliveCountMax` in `~/.ssh/config` file which will protect the idle session from getting disconnected
 1. How do we proniciate sysb.ai?
     1. it is 'sisbi dot ai'
