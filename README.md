@@ -22,20 +22,34 @@ If you have a web application running perfectly in your laptop and now you have 
 
 ## How can I get static subdomain of sysb.ai?
 
-You can use below config in your `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
-```bash
+We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
+```
 Host sysb.ai
     SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=localhost
 ```
-also you can use command line flags to get it done, like below
+
+Then all we need to do the following:
+```
+ssh -R 0:127.0.0.1:8080 demo@sysb.ai 
+```
+and it will give us static requested subdomain `https://my-awesome-subdomain.us.sysb.ai`. Also we can use command line flags of ssh to get it done, like below
 ```
 ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai
 ```
 
-Some ssh client do not support `SetEnv` directive in that case we can use `SendEnv` directive
+_I were informed that some ssh client do not support `SetEnv` directive so in that case we can use `SendEnv` directive to achieve the same_
 
+Before we attemtpt to send these environemnt variable we need to set it. And we can export the environment variable like below:
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=localhost
+```
+Then we need to have below entry in `~/.ssh/config`
+```
+Host sysb.ai
+    SendEnv SYSB_SUBDOMAIN SYSB_HOST_HEADER
+```
+Or if we prefer ssh's command line flag then that is also diable as below:
+```
 ssh -o SendEnv=SYSB_SUBDOMAIN -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
 
