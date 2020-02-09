@@ -64,15 +64,16 @@ Though if your ssh client does not support `SetEnv` directive then we can use `S
 1. Then run `ssh -o SendEnv=SYSB_HOST_HEADER  -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host:` header
 
 ## How to request for both custom subdomain and `Host:` header
-1. `export SYSB_HOST_HEADER=my_cool_web_app.com`
-1. `ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai`
+If need to have both custome subdomain and header then we can do following
+1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
+1. `ssh -o SendEnv=SYSB_SUBDOMAIN -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai`
 OR
 1. Put following in `~/.ssh/config` file
 ```
 Host sysb.ai
   SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
 ```
-then run `sh -R 0:localhost:8080 demo@sysb.ai`
+then run `ssh -R 0:localhost:8080 demo@sysb.ai`
 
 If your `ssh` client do not support SetEnv then
 ```
