@@ -71,7 +71,7 @@ Host sysb.ai
   SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
 ```
 then run `ssh -R 0:localhost:8080 demo@sysb.ai` to get both static subdomain and custom header. Alternatively, we can also use command line feature and bypass the entry in `~/.ssh/config` using following command
-1. ssh -o SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain -o SetEnv SYSB_HOST_HEADER=my_cool_web_app.com -R 0:localhost:8080 demo@sysb.ai
+1. `ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -o 'SetEnv SYSB_HOST_HEADER=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai`
 
 If you ssh client does not support `SetEnv` directive of ssh client and you want to have both static subdomain and custom header then we can do following
 1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
