@@ -64,9 +64,23 @@ Now if your ssh client does not support `SetEnv` directive then we can use `Send
 1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
 1. Then run `ssh -o SendEnv=SYSB_HOST_HEADER  -R 0:localhost:8080 demo@sysb.ai` to get the custom subdomain and custom `Host: ` header
 
-## How to request for custom subdomain and `Host: ` header
+## How to request for both custom subdomain and `Host: ` header
 1. `export SYSB_HOST_HEADER=my_cool_web_app.com`
 1. `ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai`
+OR
+1. Put following in `~/.ssh/config` file
+```
+Host sysb.ai
+  SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
+```
+If your `ssh` client do not support SetEnv then
+```
+Host sysb.ai
+    SendEnv SYSB_SUBDOMAIN SYSB_HOST_HEADER
+```
+then run
+1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
+1. `ssh -R 0:localhost:8080 demo@sysb.ai`
 
 ## How to access my TCP application over internet?
 
