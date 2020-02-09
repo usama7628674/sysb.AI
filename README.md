@@ -64,7 +64,16 @@ Though if your ssh client does not support `SetEnv` directive then we can use `S
 1. Then run `ssh -o SendEnv=SYSB_HOST_HEADER  -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host:` header
 
 ## How to request for both custom subdomain and `Host:` header
-If need to have both custome subdomain and header then we can do following
+If we want to have both static subdomain and custom header then we can do followings:
+1. Put following in `~/.ssh/config` file
+```
+Host sysb.ai
+  SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
+```
+then run `ssh -R 0:localhost:8080 demo@sysb.ai` to get both static subdomain and custom header. Alternatively, we can also use command line feature and bypass the entry in `~/.ssh/config` using following command
+1. ssh -o SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain -o SetEnv SYSB_HOST_HEADER=my_cool_web_app.com -R 0:localhost:8080 demo@sysb.ai
+
+If you ssh client does not support `SetEnv` directive of ssh client and you want to have both static subdomain and custom header then we can do following
 1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
 1. Put following in ~/.ssh/config
 ```
@@ -74,23 +83,6 @@ Host sysb.ai
 Then run `ssh -R 0:localhost:8080 demo@sysb.ai ` to get static subdomain and custom `Host:` header. Alternativly, after exporting the variable we can bypass the entry in `~/.ssh/config` and execute below to get the same functionality
 1. `ssh -o SendEnv=SYSB_SUBDOMAIN -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai`
 
-OR
-
-1. Put following in `~/.ssh/config` file
-```
-Host sysb.ai
-  SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
-```
-then run `ssh -R 0:localhost:8080 demo@sysb.ai`
-
-If your `ssh` client do not support SetEnv then
-```
-Host sysb.ai
-    SendEnv SYSB_SUBDOMAIN SYSB_HOST_HEADER
-```
-then run
-1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
-1. `ssh -R 0:localhost:8080 demo@sysb.ai`
 
 ## How to access my TCP application over internet?
 
