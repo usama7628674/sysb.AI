@@ -2,7 +2,6 @@
 Front page of [https://www.sysb.ai](https://www.sysb.ai)
 
 ## How to access my local web application over internet?
-
 If you have a web application running perfectly in your laptop and now you have a need to have a functionality where you want it to share with someone over internet then sysb.AI can help you. Assuming your web application is accessible locally at `http://localhost:8080` then all you need to do is the following
 
 1. Open the terminal
@@ -20,8 +19,7 @@ If you have a web application running perfectly in your laptop and now you have 
 1. Above steps will help you to get dynamic HTTP and HTTPS URLs which you can use to access your local web application over internet
 
 ## How can I get static subdomain of sysb.ai?
-
-- We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
+We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```
 Host sysb.ai
     SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain
@@ -53,7 +51,6 @@ ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -
 ```
 
 ## How to add `Host:`  header?
-
 It is possible that while using the sysb.AI platform you can customize on which `Host:` header should come to your localhost web application. You only need to execute `ssh -o 'SetEnv SYSB_SUBDOMAIN=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai`. Alternatively, we can do using `~/.ssh/config` file
 ```
 Host sysb.ai
