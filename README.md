@@ -48,7 +48,7 @@ Host sysb.ai
 ```
 Now all we need to execute the command `ssh -R 0:localhost:8080 demo@sysb.ai` to get the custome domain
 
-Alternatively, if we prefer ssh's command line flag then we can also do it as below:
+Alternatively, if we prefer ssh's command line flag over config file then we can also get it done as below:
 ```
 ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
