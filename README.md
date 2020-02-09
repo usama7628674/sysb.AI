@@ -212,6 +212,7 @@ We can use this feature like below:
     1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai `
 1. Does it support windows
     1. Yes, you can use `putty` like ssh client which has option to do remote port forwarding
+1. When you prefix `sudo` before the ssh command then then local user's `~/.ssh/config` file is skipped and in that case we recommend to use either command line flag like `-o 'SetEnv SYSB_SUBDOMAIN=my_cool_web_app.com'` and `-o SendEnv=SYSB_HOST_HEADER` or `-F` flag to specifiy the location of `~/.ssh/config` file
 1. How to avoid frequent disconnect due to idle timeout
     1. We recommened to put the directives like `ServerAliveInterval` and `ServerAliveCountMax` in `~/.ssh/config` file which will protect the idle session from getting disconnected
 1. How do we proniciate sysb.ai?
