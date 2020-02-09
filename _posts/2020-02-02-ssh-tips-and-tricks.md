@@ -3,25 +3,34 @@ layout: post
 title: SSH Tips and Tricks
 ---
 <!-- URLS: https://www.sysb.ai/blog/ssh-tips-and-tricks.html -->
-&nbsp;
-&nbsp;
-1. We can also define ssh port number before `@` like below
-    1. like this `ssh -R 0:localhost:8080 demo:22@sysb.ai`
-1. Evaluating your SSH configuration
-    1. Use the `-G` option to ssh. It tells ssh to parse all the configurations for the target host, print out the configuration it is going to use, and immediately exit without connecting.
-    1. e.g. `ssh -G -R 0:localhost:8118 demo@sysb.ai`
-
-1. There is a `ssh` prmompt
-    1. When logged in as SSH connection then just press `~` then `C` and we will get `ssh>` prompt
-    1. `~?` displays a list of all available escape characters
-    1. Also we can use `help` to check for the options
+## How can I get static subdomain of sysb.ai?
+We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```
-ssh> help
-Commands:
-      -L[bind_address:]port:host:hostport    Request local forward
-      -R[bind_address:]port:host:hostport    Request remote forward
-      -D[bind_address:]port                  Request dynamic forward
-      -KL[bind_address:]port                 Cancel local forward
-      -KR[bind_address:]port                 Cancel remote forward
-      -KD[bind_address:]port                 Cancel dynamic forward
+Host sysb.ai
+    SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain
+```
+
+Then all we need to do is to run the following:
+```
+ssh -R 0:127.0.0.1:8080 demo@sysb.ai 
+```
+It will give us requested static subdomain like `https://my-awesome-subdomain.us.sysb.ai`. Alternatively, we can also use the command line flags of ssh to get it done, like below
+```
+ssh -o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain' -R 0:localhost:8080 demo@sysb.ai
+```
+
+- I was informed that some ssh client do not support `SetEnv` directive so in that case we can use `SendEnv` directive to achieve the same. Before we attemtpt to send these environemnt variable via `ssh` we need to set it. We can export the environment variable like below:
+```
+export SYSB_SUBDOMAIN=my-awesome-subdomain
+```
+Then we need to have below entry in `~/.ssh/config`
+```
+Host sysb.ai
+    SendEnv SYSB_SUBDOMAIN
+```
+Now all we need to execute the command `ssh -R 0:localhost:8080 demo@sysb.ai` to get the custome domain
+
+Alternatively, if we prefer ssh's command line flag over config file then we can also get it done as below:
+```
+ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
