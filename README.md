@@ -51,18 +51,19 @@ ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -
 ```
 
 ## How to add `Host:`  header?
-It is possible that while using the sysb.AI platform you can customize on which `Host:` header should come to your localhost web application. You only need to execute `ssh -o 'SetEnv SYSB_SUBDOMAIN=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai`. Alternatively, we can do using `~/.ssh/config` file
+In order to run our local web application properly over internet we may require custom `Host:` header to our local web server. We only need to put below in our ssh config file:
 ```
 Host sysb.ai
   SetEnv SYSB_HOST_HEADER=my_cool_web_app.com
 ```
-and then run `ssh -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host:` header
+then run `ssh -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host:` header. Alternatively, we can user ssh's command line flag and execute `ssh -o 'SetEnv SYSB_SUBDOMAIN=my_cool_web_app.com' -R 0:localhost:8080 demo@sysb.ai` to get custom `Host:` header.
 
-Now if your ssh client does not support `SetEnv` directive then we can use `SendEnv` directive. It is like first we set a environment variable then send it across using `SendEnv` directive. Here is the steps on how to get it done
+Though if your ssh client does not support `SetEnv` directive then we can use `SendEnv` directive. First we need to set a environment variable then send it across using `SendEnv` directive. Here is the steps on how to get it done
+1. Run below on terminal
 1. `export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com`
-1. Then run `ssh -o SendEnv=SYSB_HOST_HEADER  -R 0:localhost:8080 demo@sysb.ai` to get the custom subdomain and custom `Host:` header
+1. Then run `ssh -o SendEnv=SYSB_HOST_HEADER  -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host:` header
 
-## How to request for both custom subdomain and `Host: ` header
+## How to request for both custom subdomain and `Host:` header
 1. `export SYSB_HOST_HEADER=my_cool_web_app.com`
 1. `ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai`
 OR
