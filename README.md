@@ -73,6 +73,8 @@ OR
 Host sysb.ai
   SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
 ```
+then run `sh -R 0:localhost:8080 demo@sysb.ai`
+
 If your `ssh` client do not support SetEnv then
 ```
 Host sysb.ai
