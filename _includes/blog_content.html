@@ -1,7 +1,7 @@
 <h1 class="header">Latest Posts</h1>
 
 <ul class="blog_content container">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
   <li class="row">
     <img class="col-sm-2 col-xs-12" src="{{post.image | relative_url}}.jpg" alt="{{post.title}}">
     <div class="col-sm-10 col-xs-12">
