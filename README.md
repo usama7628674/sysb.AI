@@ -201,15 +201,6 @@ Nmap done: 1 IP address (1 host up) scanned in 1.15 seconds
     1. We advice you to use `-C` in your ssh client flags as it will compress the data being used in the connection. Though, it will only slow down things on fast networks. So I advice to use only when network is damn slow. Syntax is as follows:
         1. `ssh -CR 0:127.0.0.1:8080 demo@sysb.ai`
         1. Keep notice on `-C` flag
-1. What kind of environment variables are supported?
-Currenly below two environemtn variable is supported though this feature is in development
-    1. SYSB_HOST_HEADER
-    1. SYSB_SUBDOMAIN
-We can use this feature like below:
-    1. `export SYSB_HOST_HEADER=demo.sysb.ai`
-    1. `export SYSB_SUBDOMAIN=demo.sysb.ai`
-        1. `SYSB_SUBDOMAIN` is in development
-    1. `ssh -o SendEnv=SYSB_HOST_HEADER -R 0:127.0.0.1:8080 demo@sysb.ai `
 1. Does it support windows
     1. Yes, you can use `putty` like ssh client which has option to do remote port forwarding
 1. When you prefix `sudo` before the ssh command then then local user's `~/.ssh/config` file is skipped and in that case we recommend to use either command line flag like `-o 'SetEnv SYSB_SUBDOMAIN=my-awesome-subdomain'` and `-o SendEnv=SYSB_HOST_HEADER` or `-F` flag to specifiy the location of `~/.ssh/config` file
