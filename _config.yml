@@ -1,7 +1,6 @@
-## TODO: 1 : Nav bar should not be transparent 
-## TODO: 2 : In nav bar after CONTACT there should be space
-
 # Site settings
+# for localhost
+port: 2000
 title: sysb.AI
 email: hello@sysb.ai
 # description: > # this means to ignore newlines until "baseurl:"
@@ -22,4 +21,3 @@ defaults:
       path: '_posts'
     values:
       permalink: /blog/:title:output_ext
-      
