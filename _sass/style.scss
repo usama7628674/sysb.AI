@@ -1,99 +1,100 @@
 .header {
+  position: relative;
+  margin: 0;
+  padding: 50px;
+  width: 100%;
+  min-height: auto;
+  @include background-cover;
+  background-position: center;
+  background-image: url("../img/header.jpg");
+  text-align: center;
+  color: white;
+  .header-content {
     position: relative;
-    margin: 0;
-    padding: 50px;
-    width: 100%;
-    min-height: auto;
-    @include background-cover;
-    background-position: center;
-    background-image: url('../img/header.jpg');
     text-align: center;
-    color: white;
+    padding: 100px 15px 100px;
+    width: 100%;
+    .header-content-inner {
+      h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      hr {
+        margin: 30px auto;
+      }
+      p {
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 50px;
+        // font-weight: inherit;
+        color: white;
+      }
+    }
+  }
+  @media (min-width: 768px) {
     .header-content {
-        position: relative;
-        text-align: center;
-        padding: 100px 15px 100px;
-        width: 100%;
-        .header-content-inner {
-            h1 {
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            hr {
-                margin: 30px auto;
-            }
-            p {
-                font-weight: 300;
-                font-size: 16px;
-                margin-bottom: 50px;
-                // font-weight: inherit;
-                color: white;
-            }
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      padding: 0 50px;
+      .header-content-inner {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        p {
+          font-size: 18px;
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
         }
+      }
     }
-    @media (min-width: 768px) {
-        .header-content {
-            position: absolute;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-            padding: 0 50px;
-            .header-content-inner {
-                max-width: 1000px;
-                margin-left: auto;
-                margin-right: auto;
-                p {
-                    font-size: 18px;
-                    max-width: 80%;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-        }
-    }
+  }
 }
-.post_body {
-    .navbar-default .navbar-collapse {
-border-bottom: 1px solid;
-    }
 @media (min-width: 768px) {
-.navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
-    color: rgba(0, 0, 0, 0.7);
+.post_body {
+  .navbar-default {
+    border-bottom: 1px solid rgba($theme-dark, .2);
+     .nav > li > a,
+     .nav > li > a:focus {
+        color: rgba(0, 0, 0, 0.7);
+    }
 }
+  }
 }
-}
-.post_body .navbar-default .navbar-header .navbar-brand {
-    color: rgba(0, 0, 0, 0.7);
-}
+      .post_body .navbar-default .navbar-header .navbar-brand {
+        color: $theme-primary;
+      }
 
 .post_header {
-    padding: 100px 0 30px;
-    background-image: none;
-    color: #333;
+  padding: 100px 0 30px;
+  background-image: none;
+  color: #333;
 }
 .blog_content {
   margin: 100px auto;
   img {
-      margin-top: 25px;
+    margin-top: 25px;
   }
   li {
     list-style-type: none;
   }
 }
 .center {
-    margin-left: auto;
-    margin-right: auto;
-} 
+  margin-left: auto;
+  margin-right: auto;
+}
 .post_top_image {
-    width: 100%;
-    margin-bottom: 50px;
+  width: 100%;
+  margin-bottom: 50px;
 }
 .post_content_box {
-    padding-top: 0;
-    padding-bottom: 0;
-    max-width: 800px;
-    margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
