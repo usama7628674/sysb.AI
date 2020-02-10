@@ -1,6 +1,3 @@
-# Site settings
-# for localhost
-# port: 2000
 title: sysb.AI
 email: hello@sysb.ai
 # description: > # this means to ignore newlines until "baseurl:"
