@@ -1,7 +1,7 @@
 .header {
     position: relative;
     margin: 0;
-    padding: 100px 50px 50px;
+    padding: 50px;
     width: 100%;
     min-height: auto;
     @include background-cover;
@@ -55,6 +55,25 @@
         }
     }
 }
+.post_body {
+    .navbar-default .navbar-collapse {
+border-bottom: 1px solid;
+    }
+@media (min-width: 768px) {
+.navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+    color: rgba(0, 0, 0, 0.7);
+}
+}
+}
+.post_body .navbar-default .navbar-header .navbar-brand {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.post_header {
+    padding: 100px 0 30px;
+    background-image: none;
+    color: #333;
+}
 .blog_content {
   margin: 100px auto;
   img {
@@ -73,6 +92,8 @@
     margin-bottom: 50px;
 }
 .post_content_box {
+    padding-top: 0;
+    padding-bottom: 0;
     max-width: 800px;
     margin: 0 auto;
 }

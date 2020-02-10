@@ -1,9 +1,11 @@
 <!-- In CSS an id is prefixed by #, a class is prefixed by ., and an element has no prefix at all. -->
-<section class="header" id="about">
-    <h2 class="section-heading">{{ page.title }}</h2>
+<section class="header post_header" id="about">
+    <h1 class="section-heading">{{ page.title }}</h1>
 </section>
 
-<section class="post_content_box center">
+<section class="post_content_box center container">
+    {% if page.image %}
     <img class="post_top_image" src="{{page.image | relative_url}}.jpg" alt="post image">
+    {% endif %}
         {{content}}
 </section>
