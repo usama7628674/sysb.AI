@@ -1,11 +1,11 @@
-<h1 class="header">Latest Posts</h1>
+<h2 class="header">Latest Posts</h2>
 
 <ul class="blog_content container">
   {% for post in site.posts limit:5 %}
   <li class="row">
     <img class="col-sm-2 col-xs-12" src="{{post.image | relative_url}}.jpg" alt="{{post.title}}">
     <div class="col-sm-10 col-xs-12">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       {{ post.excerpt | truncate: 200 }}
     </div>
   </li>
