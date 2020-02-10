@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SSH Tips and Tricks
+image: /img/portfolio/1
 ---
 <!-- URLS: https://www.sysb.ai/blog/ssh-tips-and-tricks.html -->
 ## How can I get static subdomain of sysb.ai?
