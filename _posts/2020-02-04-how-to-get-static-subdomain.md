@@ -4,6 +4,7 @@ title: How can I get static subdomain of sysb.ai?
 image: /img/portfolio/2
 ---
 
+# How can I get static subdomain of sysb.ai?
 We need to send `SYSB_SUBDOMAIN` environemnt variable via `ssh` to get the static subdomain of sysb.AI.
 
 1. We need to export the environment variable like below:
