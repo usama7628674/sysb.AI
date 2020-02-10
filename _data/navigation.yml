@@ -2,8 +2,8 @@
   link: "#about"
 - item: Services
   link: "#services"
-- item: Docs
-  link: "#docs"
+# - item: Docs
+#   link: "#docs"
 - item: Contact
   link: "#contact"
 - item: Blog
