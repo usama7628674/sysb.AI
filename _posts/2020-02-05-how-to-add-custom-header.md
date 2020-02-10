@@ -4,7 +4,6 @@ title: How to add Host header?
 image: /img/portfolio/3
 ---
 
-## How to add `Host:` header?
 In order to run our local web application properly over internet we may require custom `Host:` header to our local web server. We only need to put below in our ssh config file:
 ```
 Host sysb.ai

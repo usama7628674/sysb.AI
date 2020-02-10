@@ -4,7 +4,6 @@ title: How to access my TCP application over internet?
 image: /img/portfolio/4
 ---
 
-## How to access my TCP application over internet?
 It is quite possible that you may want to expose some other TCP based application over internet and you just need an endpoint which is accessible publicly. Like you probably just want to have your IoT device like Raspberry PI sshable. It is absolutely simple to do that. All you need to do the following
 
 1. Open the terminal
