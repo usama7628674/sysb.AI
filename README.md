@@ -50,7 +50,7 @@ Alternatively, if we prefer ssh's command line flag over config file then we can
 ssh -o SendEnv=SYSB_SUBDOMAIN=my-awesome-subdomain -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
 
-## How to add `Host:`  header?
+## How to add `Host:` header?
 In order to run our local web application properly over internet we may require custom `Host:` header to our local web server. We only need to put below in our ssh config file:
 ```
 Host sysb.ai

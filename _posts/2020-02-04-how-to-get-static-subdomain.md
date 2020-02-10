@@ -1,10 +1,9 @@
 ---
 layout: post
-title: SSH Tips and Tricks
-image: /img/portfolio/1
+title: How can I get static subdomain of sysb.ai?
+image: /img/portfolio/2
 ---
-<!-- URLS: https://www.sysb.ai/blog/ssh-tips-and-tricks.html -->
-## How can I get static subdomain of sysb.ai?
+
 We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```
 Host sysb.ai
