@@ -64,7 +64,7 @@
       .navbar-header .navbar-brand {
         color: $theme-primary;
         &:hover {
-          color: darken($theme-primary, 5%);
+          color: darken($theme-primary, 25%);
         }
       }
       border-bottom: 1px solid rgba($theme-primary, 0.2);
