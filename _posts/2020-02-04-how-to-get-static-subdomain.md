@@ -28,9 +28,9 @@ ssh -o SendEnv=SYSB_SUBDOMAIN -R 0:localhost:8080 demo@sysb.ai
 
 If you need to get custom header also then have a look at [How to add Host header?]({% post_url 2020-02-05-how-to-add-custom-header %})
 
-If you want to ensure this static subdomain survive the reboot of your localhost then we can automate that using autossh. e.g.
+<!-- If you want to ensure this static subdomain survive the reboot of your localhost then we can automate that using autossh. e.g.
 ```
-autossh -M 0 -f -R 0:localhost:8080 demo@sysb.ai
+autossh -M 0 -f -R 0:localhost:8080 demo@sysb.ai -->
 ```
 <!-- # Using SetEnv
 We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
