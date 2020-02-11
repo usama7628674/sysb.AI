@@ -3,7 +3,7 @@
 </div>
 
 <ul class="blog_content container">
-  {% for post in site.posts limit:10 %}
+  {% for post in site.posts reversed limit:10 %}
   <li class="row">
     {% if post.image %}
     <img class="col-sm-2 col-xs-12" src="{{post.image | relative_url}}.jpg" alt="{{post.title}}">
