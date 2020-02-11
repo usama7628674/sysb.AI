@@ -26,6 +26,8 @@ export SYSB_SUBDOMAIN=my-awesome-subdomain
 ssh -o SendEnv=SYSB_SUBDOMAIN -R 0:localhost:8080 demo@sysb.ai
 ```
 
+If need to get custom header also then have a look at [How to add Host header?]({% post_url 2020-02-05-how-to-add-custom-header %})
+
 <!-- # Using SetEnv
 We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```
