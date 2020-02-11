@@ -12,4 +12,12 @@ sysb.AI provides a solution to that and all you require is ssh client on your Ra
 ssh -R 0:localhost:22 demo@sysb.ai
 ```
 
-And 
+And it will give 1 TCP, 1 HTTP and 1 HTTPS endpoint. We can use TCP endpoint ( e.g. `tcp://us.sysb.ai:15240` ) to ssh to Raspberry pi remotely.
+
+```
+ssh us.sysb.ai -p 15240
+```
+
+After that you need to provide credential of Raspberry pi to authenticate
+
+Please note, since we wanted to access `localhost:22` which is TCP application not HTTP so HTTP/HTTPS endpoint will not work as expected. We only need to use TCP endpoint ( e.g. `tcp://us.sysb.ai:15240` )
