@@ -32,9 +32,9 @@ If you need to get custom header also then have a look at [How to add Host heade
 
 <!-- If you want to ensure this static subdomain survive the reboot of your localhost then we can automate that using autossh. e.g.
 ```
-autossh -M 0 -f -R 0:localhost:8080 demo@sysb.ai -->
+autossh -M 0 -f -R 0:localhost:8080 demo@sysb.ai
 ```
-<!-- # Using SetEnv
+# Using SetEnv
 We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```
 Host sysb.ai
