@@ -128,7 +128,7 @@ aside {
         }
         &.affix {
             background-color: white;
-            border-color: transparent; //rgba($theme-dark, .5);
+            border-color: rgba($theme-primary, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
                 // font-size: 14px;
