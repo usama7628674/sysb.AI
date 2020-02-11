@@ -11,8 +11,7 @@ Host sysb.ai
   SendEnv SYSB_HOST_HEADER=my_cool_web_app.com
 ```
 
-then run
-1. `ssh -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host:` header.
+then run `ssh -R 0:localhost:8080 demo@sysb.ai` to get the custom `Host:` header.
 
 Alternatively, we can use ssh's command line flag as mentioned below to get custom `Host:` header
 1. `export SYSB_SUBDOMAIN=my-awesome-subdomain`
