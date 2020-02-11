@@ -70,6 +70,9 @@
 }
 .navbar-default .navbar-header .navbar-brand {
   color: $theme-primary;
+  &:hover {
+    color: darken($theme-primary, 5%);
+  }
 }
 
 .post_header {
