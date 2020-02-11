@@ -4,9 +4,9 @@ title: How can I get static subdomain of sysb.ai?
 image: /img/portfolio/2
 ---
 
-We need to send `SYSB_SUBDOMAIN` environemnt variable via `ssh` to get the static subdomain of sysb.AI.
+Apart from cool dynamic subdomain we also have functionality to have static subdomain. We send `SYSB_SUBDOMAIN` environemnt variable via `ssh` to get the static subdomain of sysb.AI.
 
-1. We need to export the environment variable like below:
+1. We need to export the environment variable and we run the below command on terminal:
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain
 ```
@@ -15,7 +15,7 @@ export SYSB_SUBDOMAIN=my-awesome-subdomain
 Host sysb.ai
     SendEnv SYSB_SUBDOMAIN
 ```
-1. Now all we need to execute below command to get the custome domain
+1. Now all we need to do is to execute below command to get the custome subdomain
 ```
 ssh -R 0:localhost:8080 demo@sysb.ai
 ```
