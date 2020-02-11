@@ -58,8 +58,15 @@
   }
 }
 @media (min-width: 768px) {
-  .post_body, .blog_body {
+  .post_body,
+  .blog_body {
     .navbar-default {
+      .navbar-header .navbar-brand {
+        color: $theme-primary;
+        &:hover {
+          color: darken($theme-primary, 5%);
+        }
+      }
       border-bottom: 1px solid rgba($theme-primary, 0.2);
       .nav > li > a,
       .nav > li > a:focus {
@@ -70,9 +77,6 @@
 }
 .navbar-default .navbar-header .navbar-brand {
   color: $theme-primary;
-  &:hover {
-    color: darken($theme-primary, 5%);
-  }
 }
 
 .post_header {
