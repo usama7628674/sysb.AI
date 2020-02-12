@@ -22,8 +22,8 @@ After that you need to provide credential of Raspberry pi to authenticate
 
 Please note, since we wanted to access `localhost:22` which is TCP application not HTTP so HTTP/HTTPS endpoint will not work as expected. We only need to use TCP endpoint ( e.g. `tcp://us.sysb.ai:15240` )
 
-<!-- We can also use `autossh` to for automatic access which is persistent across the reboot
+<!-- We can also use `autossh` to for automatic access which is persistent across the reboot though we need to ensure static subdomain is configured
 e.g.
 ```
-/usr/local/bin/autossh -f -M 0 -R 10001:localhost:22 demo@sysb.ai
+/usr/local/bin/autossh -f -M 0 -R 0:localhost:22 demo@sysb.ai
 ``` -->
