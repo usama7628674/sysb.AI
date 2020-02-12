@@ -12,8 +12,8 @@ export SYSB_SUBDOMAIN=my-awesome-subdomain
 ```  
     - _For Windows Users only_
         - If you are using cmd prompt then you can run `set SYSB_SUBDOMAIN=my-awesome-subdomain` to set the variable
-        - If you are using Power Shell then can run `$env:SYSB_SUBDOMAIN='my-awesome-subdomain'` to set the variable  &nbsp;
-
+        - If you are using Power Shell then can run `$env:SYSB_SUBDOMAIN='my-awesome-subdomain'` to set the variable
+&nbsp;
 1. Then we need to have below entry in `~/.ssh/config`
 ```
 Host sysb.ai
