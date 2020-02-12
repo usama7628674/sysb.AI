@@ -30,7 +30,7 @@ If you want to send both SYSB_SUBDOMAIN and SYSB_HOST_HEADER then that be done u
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
 ```
-1.Then we need to define both SYSB_SUBDOMAIN and SYSB_HOST_HEADER in ssh config file
+1. Then we need to define both SYSB_SUBDOMAIN and SYSB_HOST_HEADER in ssh config file
 ```
 Host sysb.ai
   SendEnv SYSB_SUBDOMAIN SYSB_HOST_HEADER
