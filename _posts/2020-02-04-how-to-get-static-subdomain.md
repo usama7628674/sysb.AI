@@ -9,10 +9,11 @@ Apart from cool dynamic subdomain we also have functionality to have static subd
 1. We need to export the environment variable and we run the below command on terminal:
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain
-```
+```  
+
 *For Windows Users only*
 - If you are using command prompt then you can run `set SYSB_SUBDOMAIN=my-awesome-subdomain` in the command prompt to set the variable
-- If you are using Powershellyou can run `$env:SYSB_SUBDOMAIN='my-awesome-subdomain'` in the command prompt to set the variable
+- If you are using Powershellyou can run `$env:SYSB_SUBDOMAIN='my-awesome-subdomain'` in the command prompt to set the variable  
 
 1. Then we need to have below entry in `~/.ssh/config`
 ```
