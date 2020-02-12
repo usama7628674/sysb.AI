@@ -10,7 +10,7 @@ Apart from cool dynamic subdomain we also have functionality to have static subd
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain
 ```  
-    - *For Windows Users only*
+    - _For Windows Users only_
         - If you are using cmd prompt then you can run `set SYSB_SUBDOMAIN=my-awesome-subdomain` to set the variable
         - If you are using Power Shell then can run `$env:SYSB_SUBDOMAIN='my-awesome-subdomain'` to set the variable  
 <!-- <p>&nbsp;</p> -->
