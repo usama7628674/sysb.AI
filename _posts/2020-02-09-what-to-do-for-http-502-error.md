@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Looks like your HTTP 5XX error :-/
+title: Looks like you got HTTP 5XX error :-/
 image: /img/portfolio/6
 ---
 
