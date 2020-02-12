@@ -26,22 +26,21 @@ ssh -o SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
 
 If you want to send both SYSB_SUBDOMAIN and SYSB_HOST_HEADER then that be done using below steps:
-1.
+1. First we need to export the variables
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
 ```
-1.
+1.Then we need to define both SYSB_SUBDOMAIN and SYSB_HOST_HEADER in ssh config file
 ```
 Host sysb.ai
   SendEnv SYSB_SUBDOMAIN SYSB_HOST_HEADER
 ```
-1.
+1. After that, we just need to execute the below command to start the tunneling with static subdomain and custom header
 ```
 ssh -R 0:localhost:8080 demo@sysb.ai
 ```
 
 Alternatively, if we prefer ssh's command line flag of `ssh` over config file then we can also get it done as below:
-- 
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
 ssh -o SendEnv=SYSB_SUBDOMAIN SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
