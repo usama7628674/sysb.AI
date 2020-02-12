@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What to do for HTTP 502 error
+title: Looks like your HTTP 5XX error :-/
 image: /img/portfolio/6
 ---
 
