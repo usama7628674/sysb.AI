@@ -15,7 +15,6 @@ If you are getting a HTTP 502 status then it means your web services at `localho
 
 1. Perhaps it is possible that your local app application is not listening on `localhost:8080` but `localhost:5000` ( Python Flask ) or `localhost:4000` ( Ruby Jekyll ). Please adjust accordingly to command `ssh -R 0:localhost:8080 demo@sysb.ai` and start tunnel again.
 
-
 If you still face an issue then please let us know at [Google group](https://groups.google.com/forum/#!forum/sysb_ai) or Tweet us at [sysb_ai](https://twitter.com/sysb_ai)
 
 <!-- ## It seems you are getting HTTP 5XX status code
