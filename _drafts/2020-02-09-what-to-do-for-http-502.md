@@ -4,7 +4,22 @@ title: What to do for HTTP 502
 image: /img/portfolio/6
 ---
 
-Generally speaking HTTP status code 502 means `Bad Gateway` which simply meant that the application is in the localhost is not responding. When we do remote port forwarding like `0:localhost:8080` then sysb looks at `0:` and allocate a available remote port and map it to your laptop's `localhost:8080`.
+## It seems you are getting HTTP 5XX status code
+
+|| HTTP Status code || Error ||
+| 500 | Internal Server Error |
+| 501 | Not Implemented |
+| 502 | Bad Gateway |
+| 503 | Service Unavailable |
+| 504 | Gateway Timeout |
+| 505 | HTTP Version Not Supported |
+| 506 | Variant Also Negotiates |
+| 507 | Insufficient Storage |
+| 508 | Loop Detected |
+| 510 | Not Extended |
+| 511 | Network Authentication Required |
+
+Mostly we get HTTP 502 if localhost web application is not responding. Generally speaking HTTP status code 502 means `Bad Gateway` which simply meant that the application is in the localhost is not responding. When we do remote port forwarding like `0:localhost:8080` then sysb looks at `0:` and allocate a available remote port and map it to your laptop's `localhost:8080`.
 
 If you are getting a HTTP 502 status then it means your web services at `localhost:8080` is not responding on port `8080` locally. You need to verify the health of `localhost:8080` we can do following to alleviate the issue.
 
