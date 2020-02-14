@@ -3,20 +3,20 @@
         <div class="row no-gutter">
             {% for post in site.posts reversed limit:6 %}
             <div class="col-lg-4 col-sm-6">
-                <a href="{{post.url | relative_url}}" class="portfolio-box">
+                <div class="portfolio-box">
                     <img src="{{ post.image | relative_url }}.jpg" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
-                            <!-- <div class="project-category text-faded">
-                                Category
-                            </div> -->
-                            <h4 class="project-name">
+                            <h4 class="project-category text-faded">
                                 {{post.title}}
                             </h4>
-                            {{post.excert | truncate: 50}}
+                            <p class="project-name">
+                                {{post.excerpt | truncate: 100}}
+                            </p>
+                            <a href="{{post.url | relative_url}}" class="btn">READ MORE</a>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
             {% endfor %}
         </div>

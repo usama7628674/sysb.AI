@@ -35,6 +35,7 @@
       color: #fff;
       padding: 12px 30px;
       border-radius: 10px;
+       @include sans-serif-font;
       a {
         color: #fff;
       }
