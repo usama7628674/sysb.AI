@@ -1,0 +1,25 @@
+<section class="faq container" id="faq">
+  <div class="fac_answers wrap_section">
+    <h2 class="section-heading">{{site.data.faq.b_title}}</h2>
+    <hr>
+    <p class="text-center faq_intro">{{site.data.faq.intro}}</p>
+    <div class="panel-group" id="accordion">
+      {% assign count = 0 %}
+      {% for item in {{site.data.faq.items}} %}
+      {% assign count = count | plus: 1 %}
+      <div class="card">
+        <div class="card-header bg-primary">
+          <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{count}}">
+            {{item.question}} <i class="fa fa-angle-down rotate-icon"></i>
+          </a>
+        </div>
+        <div id="collapse{{count}}" class="collapse">
+          <div class="card-body">
+            <p>{{item.answer}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
