@@ -19,7 +19,7 @@ items:
 
   - question: Does it support windows?
     answer: >-
-      Yes, you can use <code class="highlighter-rouge">putty</code> like ssh client which has option to do remote port forwarding
+      Yes, you can use OpenSSH native client to access our service
 
   - question: My internet is damn slow and I am getting frequent disconnection
     answer: >-
