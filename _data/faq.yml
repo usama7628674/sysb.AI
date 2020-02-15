@@ -17,19 +17,9 @@ items:
     answer: >-
       If you are using terminal then <code class="highlighter-rouge">ctrl+c</code> is your friend to stop the port forwarding
 
-  - question: My internet is damn slow and I am getting frequent disconnection
-    answer: >-
-      We advice you to use <code class="highlighter-rouge">-C</code> in your ssh client flags as it will compress the data being used in the connection. Though, it will only slow down things on fast networks. So I advice to use only when network is damn slow. Syntax is as follows:
-        1. <code class="highlighter-rouge">ssh -CR 0:127.0.0.1:8080 demo@sysb.ai</code>
-        1. Keep notice on <code class="highlighter-rouge">-C</code> flag
-
   - question: Does it support windows?
     answer: >-
       Yes, you can use <code class="highlighter-rouge">putty</code> like ssh client which has option to do remote port forwarding
-
-  - question: ?????
-    answer: >-
-     When you prefix <code class="highlighter-rouge">sudo</code> before the ssh command then then local user's <code class="highlighter-rouge">~/.ssh/config</code> file is skipped and in that case we recommend to use either command line flag like <code class="highlighter-rouge">-o SendEnv=SYSB_HOST_HEADER</code> or <code class="highlighter-rouge">-F</code> flag to specifiy the location of <code class="highlighter-rouge">~/.ssh/config</code> file
 
   - question: My internet is damn slow and I am getting frequent disconnection
     answer: >-
