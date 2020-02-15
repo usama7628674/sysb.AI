@@ -7,7 +7,7 @@ tag: landing-page
 
 We keep on getting the same questions multiple times, so we thought of keeping them here in FAQ section
 
-1. How can we report the issue or request for your feature
+1. How can we report the issue or request for new feature
     1. You can raise a github issue at https://github.com/systembee/sysb.AI/issues to report a issue or request for a feature.
 1. I am wondering if there a mailing list which we can join to discuss new features and enhancement?
     1. Yes you can join our [Google group](https://groups.google.com/forum/#!forum/sysb_ai) mailing list to discuss new feature and enhancement
