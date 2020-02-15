@@ -2,7 +2,7 @@
     <div class="container-fluid">
         {% assign posts = site.posts | where: "tag", "landing-page" %}
         <div class="row no-gutter">
-            {% for post in posts limit:6 %}
+            {% for post in posts reversed limit:6 %}
             <div class="col-lg-4 col-sm-6">
                 <div class="portfolio-box">
                     <img src="{{ post.image | relative_url }}" class="img-responsive" alt="">
