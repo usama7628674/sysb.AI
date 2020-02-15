@@ -1,37 +1,27 @@
 b_title: Frequently Asked Questions
 intro: 'We keep on getting the same questions multiple times, so we thought of keeping them here in FAQ section'
 items:
-  - question: How can we report the issue or request for your feature?
+  - question: How can we report the issue or request for new feature?
     answer: >-
-      You can raise a <a href="https://github.com/systembee/sysb.AI/issues">github issue</a> to report a issue or request for a feature.
+      You can raise a <a href="https://github.com/systembee/sysb.AI/issues">GitHub Issue</a> to report a issue or request for a feature.
 
   - question: I am wondering if there a mailing list which we can join to discuss new features and enhancement?
     answer: >-
-      Yes you can join our <a href="https://groups.google.com/forum/#!forum/sysb_ai">Google group</a> mailing list to discuss new feature and enhancement
+      Yes, you can join our <a href="https://groups.google.com/forum/#!forum/sysb_ai">Google group</a> mailing list to discuss new feature and enhancement
 
   - question: Why I am not able to access old URL given by sysb.AI
     answer: >-
-      All the subdomain provided while tunneling is ephermeral which is active till your particular tunneling is active
+      All the subdomain provided while tunneling is ephermeral which is only active till your particular tunneling is active
 
   - question: How to stop the port forwarding?
     answer: >-
       If you are using terminal then <code class="highlighter-rouge">ctrl+c</code> is your friend to stop the port forwarding
 
-  - question: My internet is damn slow and I am getting frequent disconnection
-    answer: >-
-      We advice you to use <code class="highlighter-rouge">-C</code> in your ssh client flags as it will compress the data being used in the connection. Though, it will only slow down things on fast networks. So I advice to use only when network is damn slow. Syntax is as follows:
-        1. <code class="highlighter-rouge">ssh -CR 0:127.0.0.1:8080 demo@sysb.ai</code>
-        1. Keep notice on <code class="highlighter-rouge">-C</code> flag
-
   - question: Does it support windows?
     answer: >-
-      Yes, you can use <code class="highlighter-rouge">putty</code> like ssh client which has option to do remote port forwarding
+      Yes, you can use OpenSSH native client to access our service. For setting the environement specific variable, please take a look at <a href="https://www.sysb.ai/blog/how-to-get-static-subdomain.html">How to get static subdomain</a>
 
-  - question: ?????
-    answer: >-
-     When you prefix <code class="highlighter-rouge">sudo</code> before the ssh command then then local user's <code class="highlighter-rouge">~/.ssh/config</code> file is skipped and in that case we recommend to use either command line flag like <code class="highlighter-rouge">-o SendEnv=SYSB_HOST_HEADER</code> or <code class="highlighter-rouge">-F</code> flag to specifiy the location of <code class="highlighter-rouge">~/.ssh/config</code> file
-
-  - question: My internet is damn slow and I am getting frequent disconnection
+  - question: My internet speed is very slow and getting frequent disconnection
     answer: >-
       We advice you to use <code class="highlighter-rouge">-C</code> in your ssh client flags as it will compress the data being used in the connection. Though, it will only slow down things on fast networks. So I advice to use only when network is damn slow. Syntax is as follows:
         1. <code class="highlighter-rouge">ssh -CR 0:127.0.0.1:8080 demo@sysb.ai</code>

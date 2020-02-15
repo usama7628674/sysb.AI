@@ -7,7 +7,7 @@ tag: landing-page
 
 We keep on getting the same questions multiple times, so we thought of keeping them here in FAQ section
 
-1. How can we report the issue or request for your feature
+1. How can we report the issue or request for new feature
     1. You can raise a github issue at https://github.com/systembee/sysb.AI/issues to report a issue or request for a feature.
 1. I am wondering if there a mailing list which we can join to discuss new features and enhancement?
     1. Yes you can join our [Google group](https://groups.google.com/forum/#!forum/sysb_ai) mailing list to discuss new feature and enhancement
@@ -24,5 +24,11 @@ We keep on getting the same questions multiple times, so we thought of keeping t
 1. When you prefix `sudo` before the ssh command then then local user's `~/.ssh/config` file is skipped and in that case we recommend to use either command line flag like `-o SendEnv=SYSB_HOST_HEADER` or `-F` flag to specifiy the location of `~/.ssh/config` file
 1. How to avoid frequent disconnect due to idle timeout
     1. We recommened to put the directives like `ServerAliveInterval` and `ServerAliveCountMax` in `~/.ssh/config` file which will protect the idle session from getting disconnected
+    ```
+    Host sysb.ai
+      SendEnv SYSB_SUBDOMAIN SYSB_HOST_HEADER
+      ServerAliveInterval 300
+      ServerAliveCountMax 3
+    ```
 1. How do we proniciate sysb.ai?
     1. it is 'sisbi dot ai'
