@@ -2,6 +2,7 @@
 layout: post
 title: How can I get static subdomain of sysb.ai?
 image: /img/portfolio/2
+tag: landing-page
 ---
 
 Apart from cool dynamic subdomain we also have functionality to have static subdomain. We send `SYSB_SUBDOMAIN` environemnt variable via ssh client to get the static subdomain of sysb.AI. We advice you to choose a uniq subdomain as it is valid only until tunneling session. We issue a subdomain if it is available.
@@ -9,7 +10,10 @@ Apart from cool dynamic subdomain we also have functionality to have static subd
 1. We need to export the environment variable and we run the below command on terminal:
 ```
 export SYSB_SUBDOMAIN=my-awesome-subdomain
-```
+```  
+    - _For Windows Users only_
+        - If you are using cmd prompt then you can run `set SYSB_SUBDOMAIN=my-awesome-subdomain` to set the variable
+        - If you are using Power Shell then can run `$env:SYSB_SUBDOMAIN='my-awesome-subdomain'` to set the variable
 1. Then we need to have below entry in `~/.ssh/config`
 ```
 Host sysb.ai
@@ -26,9 +30,13 @@ export SYSB_SUBDOMAIN=my-awesome-subdomain
 ssh -o SendEnv=SYSB_SUBDOMAIN -R 0:localhost:8080 demo@sysb.ai
 ```
 
-If need to get custom header also then have a look at [How to add Host header?]({% post_url 2020-02-05-how-to-add-custom-header %})
+If you need to get custom header also then have a look at [How to add Host header?]({% post_url 2020-02-05-how-to-add-custom-header %})
 
-<!-- # Using SetEnv
+<!-- If you want to ensure this static subdomain survive the reboot of your localhost then we can automate that using autossh. e.g.
+```
+autossh -M 0 -f -R 0:localhost:8080 demo@sysb.ai
+```
+# Using SetEnv
 We may use below config in our `~/.ssh/config` and put value of SYSB_SUBDOMAIN and SYSB_HOST_HEADER accordingly
 ```
 Host sysb.ai

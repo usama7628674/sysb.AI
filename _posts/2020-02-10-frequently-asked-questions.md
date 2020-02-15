@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Frequently asked questions
-image: /img/portfolio/2
+image: /img/portfolio/6
+tag: landing-page
 ---
 
 We keep on getting the same questions multiple times, so we thought of keeping them here in FAQ section
