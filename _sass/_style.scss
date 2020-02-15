@@ -4,11 +4,6 @@
   padding: 50px;
   width: 100%;
   min-height: auto;
-  /*
-  @include background-cover;
-  background-position: center;
-  background-image: url("../img/header.jpg");
-  */
   text-align: center;
   color: rgba($theme-dark, 0.6);
   .header-content {
@@ -57,6 +52,7 @@
     }
   }
 }
+.home_body,
 .post_body,
 .blog_body {
   .navbar-default {
