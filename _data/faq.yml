@@ -19,7 +19,7 @@ items:
 
   - question: Does it support windows?
     answer: >-
-      Yes, you can use OpenSSH native client to access our service. For setting the environement specific variable, please take a look at [How to get static subdomain?]({% post_url 2020-02-04-how-to-get-static-subdomain %})
+      Yes, you can use OpenSSH native client to access our service. For setting the environement specific variable, please take a look at <a href="https://www.sysb.ai/blog/how-to-get-static-subdomain.html">How to get static subdomain</a>
 
   - question: My internet speed is very slow and getting frequent disconnection
     answer: >-
