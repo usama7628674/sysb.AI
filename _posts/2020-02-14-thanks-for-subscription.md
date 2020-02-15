@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thansks for subscription
+title: Thanks for subscription
 image: /img/portfolio/6.jpg
 ---
 
