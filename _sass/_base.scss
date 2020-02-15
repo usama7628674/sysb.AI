@@ -232,10 +232,10 @@ header {
   margin: 0 auto;
   .portfolio-box-caption {
     color: white;
-    opacity: 0.9;
+    opacity: 1;
     background: rgba($theme-dark, 0.9);
     &:hover {
-      opacity: 1;
+      opacity: 0.9;
       background: rgba($theme-dark, 0.9);
     }
     display: block;
