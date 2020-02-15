@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Looks like you got HTTP 5XX error :-/
-image: /img/portfolio/5
+image: /img/portfolio/5.jpg
 tag: landing-page
 ---
 

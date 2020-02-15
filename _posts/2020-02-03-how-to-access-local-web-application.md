@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to access my local web application over internet?
-image: /img/portfolio/1
+image: /img/portfolio/1.jpg
 tag: landing-page
 ---
 

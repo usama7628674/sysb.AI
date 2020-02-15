@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How can I get static subdomain of sysb.ai?
-image: /img/portfolio/2
+image: /img/portfolio/2.jpg
 tag: landing-page
 ---
 

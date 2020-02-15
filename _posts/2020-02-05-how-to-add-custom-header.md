@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to add Host header?
-image: /img/portfolio/3
+image: /img/portfolio/3.jpg
 tag: landing-page
 ---
 

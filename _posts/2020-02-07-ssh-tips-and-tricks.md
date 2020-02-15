@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SSH Tips and Tricks
-image: /img/portfolio/4
+image: /img/portfolio/4.jpg
 tag: landing-page
 ---
 

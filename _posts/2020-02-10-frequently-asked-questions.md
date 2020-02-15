@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Frequently asked questions
-image: /img/portfolio/6
+image: /img/portfolio/6.jpg
 tag: landing-page
 ---
 
