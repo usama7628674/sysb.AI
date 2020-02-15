@@ -46,6 +46,9 @@
   }
   .card-body {
     padding: 20px;
+    p {
+      margin: 0;
+    }
     .arrow {
       margin: 0 15px 0 auto;
       transform: rotate(90deg);

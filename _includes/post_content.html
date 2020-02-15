@@ -5,7 +5,7 @@
 
 <section class="post_content_box center container">
     {% if page.image %}
-    <img class="post_top_image" src="{{page.image | relative_url}}.jpg" alt="post image">
+    <img class="post_top_image" src="{{page.image | relative_url}}" alt="post image">
     {% endif %}
         {{content}}
 </section>

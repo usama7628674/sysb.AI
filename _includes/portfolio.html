@@ -1,18 +1,17 @@
 <section class="no-padding" id="docs">
     <div class="container-fluid">
+        {% assign posts = site.posts | where: "tag", "landing-page" %}
         <div class="row no-gutter">
-            {% for post in site.posts reversed limit:6 %}
+            {% for post in posts limit:6 %}
             <div class="col-lg-4 col-sm-6">
                 <div class="portfolio-box">
-                    <img src="{{ post.image | relative_url }}.jpg" class="img-responsive" alt="">
+                    <img src="{{ post.image | relative_url }}" class="img-responsive" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <h4 class="project-category text-faded">
                                 {{post.title}}
                             </h4>
-                            <p class="project-name">
-                                {{post.excerpt | truncate: 100}}
-                            </p>
+                            <p class="project-name">{{post.excerpt | truncate: 100 | strip_html}}</p>
                             <a href="{{post.url | relative_url}}" class="btn">READ MORE</a>
                         </div>
                     </div>

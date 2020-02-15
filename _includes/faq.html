@@ -9,11 +9,11 @@
       {% assign count = count | plus: 1 %}
       <div class="card">
         <div class="card-header bg-primary">
-          <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{count}}">
-            {{item.question}} <i class="fa fa-angle-down rotate-icon"></i>
+          <a class="card-link" href="#collapse{{count}}">
+            {{item.question}} <i class="fa fa-angle-down"></i>
           </a>
         </div>
-        <div id="collapse{{count}}" class="collapse">
+        <div id="collapse{{count}}" class="answer">
           <div class="card-body">
             <p>{{item.answer}}</p>
           </div>
