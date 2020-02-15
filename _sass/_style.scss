@@ -103,6 +103,9 @@
 }
 .contact {
   padding: 0 0 50px;
+  * {
+    color: $theme-dark;
+  }
 }
 
 .contact_form {
@@ -120,6 +123,7 @@
   }
   .button_s {
     display: block;
+    width: 100%;
     background: $theme-primary;
     font-size: 16px;
     color: white;
