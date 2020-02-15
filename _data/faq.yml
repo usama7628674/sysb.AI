@@ -21,7 +21,7 @@ items:
     answer: >-
       Yes, you can use OpenSSH native client to access our service. For setting the environement specific variable, please take a look at [How to get static subdomain?]({% post_url 2020-02-04-how-to-get-static-subdomain %})
 
-  - question: My internet is damn slow and I am getting frequent disconnection
+  - question: My internet speed is very slow and getting frequent disconnection
     answer: >-
       We advice you to use <code class="highlighter-rouge">-C</code> in your ssh client flags as it will compress the data being used in the connection. Though, it will only slow down things on fast networks. So I advice to use only when network is damn slow. Syntax is as follows:
         1. <code class="highlighter-rouge">ssh -CR 0:127.0.0.1:8080 demo@sysb.ai</code>
