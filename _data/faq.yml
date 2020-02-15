@@ -3,7 +3,7 @@ intro: 'We keep on getting the same questions multiple times, so we thought of k
 items:
   - question: How can we report the issue or request for new feature?
     answer: >-
-      You can raise a <a href="https://github.com/systembee/sysb.AI/issues">github issue</a> to report a issue or request for a feature.
+      You can raise a <a href="https://github.com/systembee/sysb.AI/issues">GitHub Issue</a> to report a issue or request for a feature.
 
   - question: I am wondering if there a mailing list which we can join to discuss new features and enhancement?
     answer: >-
