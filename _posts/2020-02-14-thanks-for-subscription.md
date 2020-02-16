@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thanks for subscription
+title: Thank you for subscription
 image: /img/portfolio/6.jpg
 ---
 
