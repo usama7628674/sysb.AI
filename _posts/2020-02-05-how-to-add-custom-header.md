@@ -46,3 +46,5 @@ Alternatively, if we prefer ssh's command line flag of `ssh` over config file th
 export SYSB_SUBDOMAIN=my-awesome-subdomain SYSB_HOST_HEADER=my_cool_web_app.com
 ssh -o SendEnv=SYSB_SUBDOMAIN SendEnv=SYSB_HOST_HEADER -R 0:localhost:8080 demo@sysb.ai
 ```
+
+_This feature is currently in development stage_
