@@ -4,6 +4,8 @@ title: How to access sysb.AI in Windows 7/0
 image: /img/portfolio/6.jpg
 ---
 
+We can download the compatible ssh client from [GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases)
+
 One of our user suggested the following:
 - Windows 10 I recommend always go with Developer mode so that way you can install the OpenSSH client (beta) feature; and as always the fast ring on Windows 10 Insider Preview 
 
