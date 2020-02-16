@@ -81,10 +81,10 @@ aside {
     // font-weight: 900;
     font-size: xx-large;
     text-transform: none;
-    // &:hover,
-    // &:focus {
-    //   color: darken($theme-primary, 10%);
-    // }
+    &:hover,
+    &:focus {
+      color: darken($theme-primary, 10%);
+    }
   }
   .nav {
     > li {
@@ -132,10 +132,10 @@ aside {
       .navbar-header .navbar-brand {
         color: $theme-primary;
         // font-size: 14px;
-        // &:hover,
-        // &:focus {
-        //   color: darken($theme-primary, 10%);
-        // }
+        &:hover,
+        &:focus {
+          color: darken($theme-primary, 10%);
+        }
       }
       .nav > li > a,
       .nav > li > a:focus {
