@@ -273,10 +273,8 @@ header {
         border: 2px solid rgba($theme-primary, 1);
         color: rgba($theme-primary, 1);
         &:hover {
-          // border: 2px solid lighten($theme-primary, 15%);
-          // color: lighten($theme-primary, 15%);
-          border: 2px solid darker($theme-primary, 15%);
-          color: darker($theme-primary, 15%);
+          border: 2px solid lighten($theme-primary, 15%);
+          color: lighten($theme-primary, 15%);
         }
         display: block;
         width: max-content;
