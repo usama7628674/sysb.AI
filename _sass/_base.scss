@@ -272,10 +272,10 @@ header {
         margin: 10px 0;
         border: 2px solid rgba($theme-primary, 1);
         color: rgba($theme-primary, 1);
-        // &:hover {
-        //   border: 2px solid lighten($theme-primary, 15%);
-        //   color: lighten($theme-primary, 15%);
-        // }
+        &:hover {
+          border: 2px solid darken($theme-primary, 15%);
+          color: darken($theme-primary, 15%);
+        }
         display: block;
         width: max-content;
         font-size: 14px;
