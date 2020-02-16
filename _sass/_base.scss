@@ -83,7 +83,8 @@ aside {
     text-transform: none;
     &:hover,
     &:focus {
-      color: darken($theme-primary, 10%);
+      // color: darken($theme-primary, 10%);
+      color: $theme-primary;
     }
   }
   .nav {
